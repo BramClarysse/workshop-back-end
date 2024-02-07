@@ -16,6 +16,21 @@ app.get('/randomnumber', (req, res) => {
 })
 
 
+app.get('/howlongisthisstring', (req, res) => {
+    const queryString = req.query.string;
+
+    if(!queryString) {
+        return res.status(400).send('Please provide a string in the query parameter.');
+    }
+
+    const stringLength = queryString.length;
+
+    return res.json({
+        length: stringLength
+    });
+})
+
+
 app.listen(port, () => {
     console.log(`Example app is listening on port ${port}`);
 })
