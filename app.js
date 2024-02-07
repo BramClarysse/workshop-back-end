@@ -9,10 +9,10 @@ app.get('/helloworld', (req, res) => {
 
 app.get('/randomnumber', (req, res) => {
     let random = Math.floor(Math.random() * 101);
-    const response = {
+
+    res.json({
         randomnumber: random
-    }
-    res.send(response);
+    });
 })
 
 
