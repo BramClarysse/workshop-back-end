@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const cors = require('cors'); // Import the cors middleware
 
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+  }));
 
 app.get('/helloworld', (req, res) => {
     res.send("Hello World!");
