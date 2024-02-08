@@ -61,7 +61,7 @@ app.get('/randomnumber', (req, res) => {
 ```
 Example:
 ```javascript
-app.get('/users?name=person', (req, res) => {
+app.get('/users', (req, res) => {
     const name = req.params.name;
 
     res.json({
