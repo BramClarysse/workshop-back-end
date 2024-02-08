@@ -12,7 +12,7 @@ Before we begin coding, we need to install Express. Open your terminal or comman
 ```bash
 npm install express
 ```
-
+ 
 #### Step 3: Create the Server
 Open the `server.js` file you created earlier and add the following code:
 
