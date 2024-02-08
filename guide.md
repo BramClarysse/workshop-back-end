@@ -25,33 +25,43 @@ const app = express();
 
 // Set the port number
 const port = 3000;
+```
 
+#### Create route 1 that returns "Hello World!"
+```javascript
 // Define routes and their corresponding handlers
 // Route 1: Hello World
 app.get('/helloworld', (req, res) => {
     res.send("Hello World!");
 });
 
+#### Create route 2 that returns a random number
+```javascript
 // Route 2: Random Number
 app.get('/randomnumber', (req, res) => {
-    let random = Math.floor(Math.random() * 101);
+    let random = 0 //generate a random number using the Math utility
     res.json({
-        randomnumber: random
+        //return the number using a key and value pair
     });
 });
+```
 
-// Route 3: String Length
-app.get('/howlongisthisstring', (req, res) => {
-    const queryString = req.query.string;
-    if (!queryString) {
-        return res.status(400).send('Please provide a string in the query parameter.');
-    }
-    const stringLength = queryString.length;
-    return res.json({
-        length: stringLength
+#### Create route 3 that returns a string length
+```javascript
+//start from scratch making your own route named 'howlongisthisstring' that takes a parameter in the request.
+```
+Example:
+```javascript
+app.get('/users?name=person', (req, res) => {
+    const name = req.params.name;
+
+    res.json({
+        username: name
     });
 });
-
+```
+#### add the server port where it will listen for requests
+```javascript
 // Start the server and listen for incoming connections
 app.listen(port, () => {
     console.log(`Example app is listening on port ${port}`);
