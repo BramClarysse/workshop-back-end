@@ -2,7 +2,7 @@
 
 #### Introduction
 In this exercise, we will create a simple Express server using JavaScript. Express is a popular web application framework for Node.js, which allows us to easily build web servers and APIs.
-
+ 
 #### Step 1: Set Up the Project
 1. Create a new directory for your project.
 2. Inside the project directory, create a new file named `server.js`.
