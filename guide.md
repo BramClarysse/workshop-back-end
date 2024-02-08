@@ -34,7 +34,9 @@ const port = 3000;
 app.get('/helloworld', (req, res) => {
     res.send("Hello World!");
 });
+```
 
+```javascript
 #### Create route 2 that returns a random number
 ```javascript
 // Route 2: Random Number
