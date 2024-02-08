@@ -25,6 +25,14 @@ const app = express();
 
 // Set the port number
 const port = 3000;
+
+//add cors so the requests don't get blocked
+const cors = require('cors'); // Import the cors middleware
+
+//allow cors from port 5500
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+  }));
 ```
 
 #### Create route 1 that returns "Hello World!"
@@ -36,7 +44,6 @@ app.get('/helloworld', (req, res) => {
 });
 ```
 
-```javascript
 #### Create route 2 that returns a random number
 ```javascript
 // Route 2: Random Number
